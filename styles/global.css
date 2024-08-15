@@ -1,0 +1,61 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--pink-light: #C59DD2;
+--pink-base: #9547A5;
+--pink-dark: #7D298A;
+--pink-low: #3F0F41;
+--blue-light: #73B6D2;
+--blue-base: #358BB9;
+--blue-mid:  #2374A4;
+--blue-dark: #144A72;
+--blue-low: #08233C;
+--shape-stroke: #002347;
+--shape-hover: #001933;
+--shape-base: #000F1F;
+--shape-background: #00050A;
+--text-title: #F8FBFB;
+--text-body: #E2E7E9;
+--text-label: #BAC6C9;
+
+--size-625: .625rem;
+--size-75: .75rem;
+--size-875: .875rem;
+--size-1: 1rem;
+--size-125: 1.25rem;
+--size-2: 2rem;
+--size-25: 2.5rem;
+--size-3: 3rem;
+
+--fw-bold: 600;
+--fw-reg: 400;
+--fw-md: 500;
+
+--lh-20: 2;
+--lh-14: 1.4;
+
+--max-width: 375px;
+
+}
+
+body {
+    background-color: var(--shape-background);
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+@media (width >= 80em) {
+    :root{
+        --max-width: 80em
+}
+}
