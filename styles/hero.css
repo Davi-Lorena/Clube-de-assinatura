@@ -1,0 +1,54 @@
+#hero {
+    background-image: url(../assets/images/hero-background.png);
+    background-position: center;
+    background-size: cover;
+
+    & nav {
+max-width: var(--max-width);
+margin-inline: auto;
+justify-content: space-between;
+padding: 1.5rem;
+    
+& a {
+    position: relative;
+    background-color: var(--pink-dark);
+    padding: .75rem 1.25rem;
+    border-radius: .5rem;
+    color: var(--text-title);
+    font: Bold .875rem/100% var(--font-family);
+    z-index: 1;
+
+&::before {
+    content: "";
+    background-color: var(--pink-base);
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    z-index: -1;
+transform: scaleX(0);
+transition: transform 300ms ease;
+}
+
+&:hover::before {
+    transform: scaleX(1);
+}
+}
+}
+}
+
+
+@media (width >= 80em) {
+    #hero {
+        & nav {
+
+& img + img {
+    display: none;
+}
+
+            padding: 3.5rem 10rem;
+        }
+    }
+}

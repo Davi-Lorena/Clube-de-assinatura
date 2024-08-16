@@ -22,30 +22,15 @@
 --text-body: #E2E7E9;
 --text-label: #BAC6C9;
 
---size-625: .625rem;
---size-75: .75rem;
---size-875: .875rem;
---size-1: 1rem;
---size-125: 1.25rem;
---size-2: 2rem;
---size-25: 2.5rem;
---size-3: 3rem;
-
---fw-bold: 600;
---fw-reg: 400;
---fw-md: 500;
-
---lh-20: 2;
---lh-14: 1.4;
-
 --max-width: 375px;
+
+--font-family: 'Raleway', sans-serif;
 
 }
 
 body {
+    font-family:  var(--font-family); 
     background-color: var(--shape-background);
-    font-family: 'Raleway', sans-serif;
-    color: white;
 }
 
 a {
