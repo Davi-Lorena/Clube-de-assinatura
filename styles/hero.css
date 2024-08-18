@@ -2,13 +2,15 @@
     background-image: url(../assets/images/hero-background.png);
     background-position: center;
     background-size: cover;
+    padding-bottom: 12rem;
+animation: bg 1.5s ease-out both;
 
     & nav {
 max-width: var(--max-width);
 margin-inline: auto;
 justify-content: space-between;
 padding: 1.5rem;
-    
+
 & a {
     position: relative;
     background-color: var(--pink-dark);
@@ -29,7 +31,7 @@ padding: 1.5rem;
     border-radius: inherit;
     z-index: -1;
 transform: scaleX(0);
-transition: transform 300ms ease;
+transition: transform 250ms ease;
 }
 
 &:hover::before {
@@ -37,18 +39,81 @@ transition: transform 300ms ease;
 }
 }
 }
+
+& header {
+    padding-block: 3rem;
+    padding-inline: 1.25rem;
+    max-width: var(--max-width);
+margin-inline: auto;
+text-align: center;
+& h1 {
+    font: bold 1.75rem/100% var(--font-family);
+    color: var(--text-title);
+    opacity: 0;
+    animation: bg 1.5s ease both;
 }
 
+& p {
+    font: 400 .875rem/1.4 var(--font-family);
+    color: var(--text-body);
+    opacity: 0;
+    animation: appear 1s 750ms ease-out both;
+}
+}
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bg {
+0% {
+opacity: 0;
+}
+
+50% {
+    opacity: 0.5;
+}
+
+100% {
+    opacity: 1;
+}
+}
 
 @media (width >= 80em) {
     #hero {
+        padding-bottom: 24rem;
         & nav {
+            padding: 3.5rem;
 
 & img + img {
     display: none;
 }
 
-            padding: 3.5rem 10rem;
         }
+
+& header {
+    padding-top: 10.25rem;
+
+& h1 + h1, p + p {
+    display: none;
+}
+
+    & h1 {
+        font-size: 3rem;
+    }
+
+    & p {
+        font-size: 1.25rem;
+        margin-top: 1rem;
     }
 }
+
+    }
+}
+
+
+
+
