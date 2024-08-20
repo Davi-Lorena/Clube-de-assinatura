@@ -28,14 +28,15 @@ padding: 1.5rem;
     height: 99%;
     left: 0;
     top: 0;
-    border-radius: inherit;
+    border-radius: 25%;
     z-index: -1;
 transform: scaleX(0);
-transition: transform 250ms ease;
+transition: transform 200ms ease-in-out;
 }
 
 &:hover::before {
     transform: scaleX(1);
+    border-radius: inherit;
 }
 }
 }

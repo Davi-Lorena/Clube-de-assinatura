@@ -1,0 +1,164 @@
+#surprise {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-block: 4rem 2rem;
+
+  & div + div {
+    position: relative;
+    justify-content: center;
+    & img {
+      height: 2.5rem;
+      aspect-ratio: 1;
+    }
+
+    & img[src*="book"] {
+      transform: rotate(15deg);
+      margin-bottom: 0.25rem;
+      justify-self: end;
+      margin-right: 2.5rem;
+    }
+
+    & img[src*="crystal"] {
+      transform: rotate(15deg);
+      justify-self: end;
+    }
+
+    & h2 {
+      text-align: center;
+      font: 500 1rem/1.4 var(--font-family);
+      color: var(--text-body);
+    }
+
+    & img[src*="planchette"] {
+      height: 2rem;
+      position: absolute;
+      transform: rotate(-30deg);
+      left: 1.5rem;
+      top: 70%;
+    }
+  }
+}
+
+@media (width >= 80em) {
+  #surprise {
+    padding-block: 7.5rem;
+    & div + div {
+      display: none;
+    }
+
+    & .desktop-only {
+
+      & img[src*="book"] {
+        height: 5.5rem;
+        transform: rotate(21deg);
+        margin-inline: auto;
+        transform: scale(0);
+        transition: transform 200ms;
+
+      }
+
+      & h2 {
+        text-align: center;
+        font: 400 2rem/200% var(--font-family);
+        color: var(--text-body);
+
+        & span {
+          opacity: 0.5;
+        }
+
+        & span:nth-child(1) {
+          transition: opacity 200ms;
+
+          & b {
+            transition: color 200ms;
+          }
+        }
+
+        & span:nth-child(2) {
+          transition: opacity 200ms;
+          transition-delay: 0.5s;
+          & b {
+            transition: color 200ms;
+            transition-delay: 0.5s;
+          }
+        }
+
+        & span:nth-child(3) {
+          transition: opacity 200ms;
+          transition-delay: 1s;
+          & b {
+            transition: color 200ms;
+            transition-delay: 1s;
+          }
+        }
+
+        & b {
+          color: var(--text-title);
+          font-weight: 500;
+        }
+      }
+
+      & img {
+        aspect-ratio: 1;
+      }
+
+      & div {
+        justify-content: space-between;
+      }
+
+      & img[src*="planchette"] {
+        height: 5rem;
+        transform: rotate(100deg);
+        transform: scale(0);
+        transition: transform 200ms;
+        transition-delay: 0.5s;
+      }
+      & img[src*="crystal"] {
+        height: 4.5rem;
+        transform: rotate(15deg);
+        transform: scale(0);
+        transition: transform 200ms;
+        transition-delay: 1s;
+      }
+
+      &:hover {
+        & img[src*="book"] {
+          transform: scale(1);
+        }
+
+        & img[src*="planchette"] {
+          transform: scale(1);
+        }
+
+        & img[src*="crystal"] {
+          transform: scale(1);
+        }
+
+        & span:nth-child(1) {
+          opacity: 1;
+          & b {
+            color: var(--blue-light);
+          }
+        }
+
+        & span:nth-child(2) {
+          opacity: 1;
+          & b {
+            color: var(--blue-light);
+          }
+        }
+
+        & span:nth-child(3) {
+          opacity: 1;
+          & b {
+            color: var(--blue-light);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
