@@ -1,0 +1,234 @@
+#month {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-block: 6.5rem 4rem;
+
+    & div:nth-child(1) {
+        text-align: center;
+        gap: .5rem;
+& img {
+    width: 1.25rem;
+    aspect-ratio: 1;
+}
+
+        & h1 {
+            justify-content: center;
+            gap: 0.75rem;
+color: var(--text-title);
+font: 600 1.5rem/100% var(--font-family);
+        }
+
+        & p {
+            color: var(--text-body);
+            font: 400 .875rem/1.4 var(--font-family);
+        }
+    }
+
+& div:nth-child(2) {
+    justify-content: center;
+    position: relative;
+    & img {
+        object-fit: cover;
+        margin-top: 6.5rem;
+    }
+
+    & img[src*="bookcastle"] {
+    width: 10rem;
+    height: 14rem;
+z-index: 1;    
+
+}
+
+& img:not([src*="bookcastle"]), span {
+    position: absolute;
+    z-index: -1;
+}
+
+    & img[src*="yellow"] {
+        width: 5rem;
+        transform: rotate(12deg);
+        bottom: 3rem;
+        right: 3.5rem;
+        z-index: 0;
+    }
+    & img[src*="purple"] {
+        width: 5rem;
+ transform: rotate(22deg);
+ right: 0.5rem;
+ bottom: .75rem;
+    }
+    & img[src*="pin"] {
+        height: 5.25rem;
+        transform: rotate(-8deg);
+    bottom: -1.75rem;
+    left: 3.75rem;
+    }
+    & img[src*="seta-1"] {
+        width: 4rem;
+        top: -0.5rem;
+        left: 3.25rem;
+    }
+    & img[src*="seta-2"] {
+        height: 3rem;
+bottom: 2.5rem;
+left: 2.5rem;
+    }
+    & img[src*="seta-3"] {
+        width: 3rem;
+        bottom: -1rem;
+        right: 2.25rem;
+    }
+
+& span {
+    color: var(--text-body);
+    font: 300 .625rem/100% var(--font-family);
+    
+    &:nth-child(8) {
+        top: 4.75rem;
+        left: .5rem;
+    }
+
+    &:nth-child(9) {
+     bottom: 6rem;
+     left: 1.5rem;
+    }
+
+    &:nth-child(10) {
+bottom: -2rem;
+right: 1rem;
+    }
+
+}
+
+}
+
+}
+
+
+@media (width >= 80em) {
+    #month {
+        & div:nth-child(1) {
+            & img {
+                width: 2rem;
+            }
+
+            & h1 {
+                font-size: 2rem;
+            }
+        
+        & p {
+            font-size: 1rem;
+        }
+
+        }
+
+        & div:nth-child(2) {
+            & img {
+                margin-top: 13.5rem;
+            }
+
+& span {
+  font-size: 1rem;
+  line-height: 1.4;
+
+  &:nth-child(8) {
+    top: 20rem;
+    left: 35rem;
+    transition: transform 500ms ease;
+}
+
+&:nth-child(9) {
+ bottom: 20rem;
+ left: 40rem;
+ transition: transform 500ms ease;
+}
+
+&:nth-child(10) {
+bottom: 10rem;
+right: 35rem;
+transition: transform 500ms ease;
+}
+    
+}
+
+            & img[src*="bookcastle"] {
+                width: 26rem;
+                height: 36rem;
+            }
+            & img[src*="yellow"] {
+                width: 10.5rem;
+                right: 35rem;
+                transition: transform 500ms ease;
+                rotate: 12deg;
+            }
+            & img[src*="purple"] {
+                width: 10.5rem;
+                right: 35rem;
+                bottom: 5rem;
+                transition: transform 500ms ease, rotate 500ms ease;
+            }
+            & img[src*="pin"] {
+                height: 16rem;
+                left: 30rem;
+                transition: transform 500ms ease;
+                rotate: -8deg;
+            }
+            & img[src*="seta-1"] {
+                width: 10.5rem;
+                left: 35rem;
+                top: 15rem;
+                transition: transform 500ms ease;
+            }
+            & img[src*="seta-2"] {
+                height: 8rem;
+                left: 35rem;
+                transition: transform 500ms ease;
+            }
+            & img[src*="seta-3"] {
+                width: 9rem;
+                right: 35rem;
+                bottom: 15rem;
+                transition: transform 500ms ease;
+            }
+
+            &:hover {
+
+                & span {
+                            &:nth-child(8) {
+                      transform: translate(-21rem, -9.5rem);
+                  }
+                  
+                  &:nth-child(9) {
+                   transform: translate(-25rem, 5rem);
+                  }
+                  
+                  &:nth-child(10) {
+                  transform: translate(15rem, 13rem);
+                  } }
+    
+            & img[src*="yellow"] {
+               transform: translate(13.5rem, -12rem);
+            }
+            & img[src*="purple"] {
+                transform: translate(19.5rem, -9rem);
+                rotate: 22deg;
+            }
+            & img[src*="pin"] {
+                transform: translate(-18rem, 2rem);
+            }
+            & img[src*="seta-1"] {
+              transform: translate(-16.5rem, -16rem);
+            }
+            & img[src*="seta-2"] {
+                transform: translate(-20rem, -3.85rem);
+            }
+            & img[src*="seta-3"] {
+                transform: translate(18rem, 16rem);
+            }
+        }
+
+
+        }
+    }
+}
+
