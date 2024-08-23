@@ -37,6 +37,9 @@ a {
     text-decoration: none;
 }
 
+ul[role="list"] {
+    list-style: none;
+}
 
 @media (width >= 80em) {
     :root{

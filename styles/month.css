@@ -1,7 +1,7 @@
 #month {
     max-width: var(--max-width);
     margin-inline: auto;
-    padding-block: 6.5rem 4rem;
+    padding-block: 6.5rem 6rem;
 
     & div:nth-child(1) {
         text-align: center;
@@ -169,7 +169,7 @@ transition: transform 500ms ease;
             }
             & img[src*="pin"] {
                 height: 16rem;
-                left: 30rem;
+                left: 32rem;
                 transition: transform 500ms ease;
                 rotate: -8deg;
             }
