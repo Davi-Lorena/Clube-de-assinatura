@@ -2,6 +2,18 @@
   max-width: var(--max-width);
   margin-inline: auto;
   padding-block: 4rem 2rem;
+position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    left: 3rem;
+    bottom: 4.5rem;
+  z-index: -2;
+    filter: blur(150px);
+    background-color: var(--pink-low);
+}
 
   & div + div {
     position: relative;
@@ -44,6 +56,12 @@
     padding-block: 7.5rem;
     & div + div {
       display: none;
+    }
+
+    &::before {
+      filter: blur(500px);
+      left: 5rem;
+    bottom: 4.5rem;
     }
 
     & .desktop-only {

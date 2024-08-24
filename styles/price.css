@@ -1,7 +1,22 @@
 #price {
     background: url(../assets/images/pricing-background.png) no-repeat center/cover;
     padding-top: 8rem;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        left: 8rem;
+        border-radius: 5rem;
+        background: #000F1F;
+        z-index: -1;
+filter: blur(200px);
+
+}
+
     & h1 {
+        z-index: 1;
         text-align: center;
         margin-inline: auto;
         max-width: var(--max-width);
@@ -9,8 +24,9 @@
         font: 600 1.5rem/1 var(--font-family);
         margin-bottom: 3rem;
     }
-
+    
     & h1 + div {
+        z-index: 1;
         margin-left: 3.5rem;
         overflow-x: scroll;
         margin-right: 3.5rem;
