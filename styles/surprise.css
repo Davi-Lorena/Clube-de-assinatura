@@ -53,12 +53,18 @@
         transform: rotate(21deg);
         margin-inline: auto;
         transform: scale(0);
-        transition: transform 200ms;
+        rotate: 20deg;
+        transition: transform 200ms, scale 500ms ease, rotate 500ms ease;
+
+        &:hover {
+          rotate: 25deg;
+          scale: 1.1;
+        }
 
       }
 
       & h2 {
-        text-align: center;
+       text-align: center;
         font: 400 2rem/200% var(--font-family);
         color: var(--text-body);
 
@@ -110,49 +116,61 @@
         height: 5rem;
         transform: rotate(100deg);
         transform: scale(0);
-        transition: transform 200ms;
-        transition-delay: 0.5s;
+        rotate: 100deg;
+        transition: transform 200ms 0.5s, scale 500ms ease, rotate 500ms ease;
+
+        &:hover {
+          rotate: 110deg;
+          scale: 1.1;
+        }
+
       }
       & img[src*="crystal"] {
         height: 4.5rem;
         transform: rotate(15deg);
         transform: scale(0);
-        transition: transform 200ms;
-        transition-delay: 1s;
+        rotate: -15deg;
+        transition: transform 200ms 1s, scale 500ms ease, rotate 500ms ease;
+
+
+        &:hover {
+          rotate: -5deg;
+          scale: 1.1;
+        }
       }
 
-      &:hover {
-        & img[src*="book"] {
-          transform: scale(1);
-        }
+    }
+    &:hover {
+      & img[src*="book"] {
+        transform: scale(1);
+      }
 
-        & img[src*="planchette"] {
-          transform: scale(1);
-        }
+      & img[src*="planchette"] {
+        transform: scale(1);
+      }
 
-        & img[src*="crystal"] {
-          transform: scale(1);
-        }
+      & img[src*="crystal"] {
+        transform: scale(1);
+      }
 
-        & span:nth-child(1) {
-          opacity: 1;
-          & b {
-            color: var(--blue-light);
-          }
+      & span:nth-child(1) {
+        opacity: 1;
+        & b {
+          color: var(--blue-light);
         }
+      }
 
-        & span:nth-child(2) {
-          opacity: 1;
-          & b {
-            color: var(--blue-light);
-          }
+      & span:nth-child(2) {
+        opacity: 1;
+        & b {
+          color: var(--blue-light);
         }
+      }
 
-        & span:nth-child(3) {
-          opacity: 1;
-          & b {
-            color: var(--blue-light);
-          }
+      & span:nth-child(3) {
+        opacity: 1;
+        & b {
+          color: var(--blue-light);
         }
       }
     }

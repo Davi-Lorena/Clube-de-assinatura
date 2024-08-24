@@ -47,14 +47,14 @@ z-index: 1;
     & img[src*="yellow"] {
         width: 5rem;
         transform: rotate(12deg);
-        bottom: 3rem;
-        right: 3.5rem;
+        bottom: 3.5rem;
+        right: 3rem;
         z-index: 0;
     }
     & img[src*="purple"] {
         width: 5rem;
  transform: rotate(22deg);
- right: 0.5rem;
+ right: 0.15rem;
  bottom: .75rem;
     }
     & img[src*="pin"] {
@@ -169,7 +169,7 @@ transition: transform 500ms ease;
             }
             & img[src*="pin"] {
                 height: 16rem;
-                left: 32rem;
+                left: 35rem;
                 transition: transform 500ms ease;
                 rotate: -8deg;
             }
@@ -191,6 +191,7 @@ transition: transform 500ms ease;
                 transition: transform 500ms ease;
             }
 
+            
             &:hover {
 
                 & span {
@@ -226,7 +227,6 @@ transition: transform 500ms ease;
                 transform: translate(18rem, 16rem);
             }
         }
-
 
         }
     }

@@ -4,7 +4,6 @@
     background-size: cover;
     padding-bottom: 12rem;
 animation: bg 1.5s ease-out both;
-
     & nav {
 max-width: var(--max-width);
 margin-inline: auto;

@@ -11,14 +11,14 @@
     }
 
     & h1 + div {
-        margin-left: 11.5rem;
+        margin-left: 3.5rem;
         overflow-x: scroll;
         margin-right: 3.5rem;
 &::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
-        & div:nth-child(4) {
+        & div:nth-child(2) {
             border-color: var(--shape-hover);
             background-color: var(--shape-hover);
  & .flex {
@@ -55,7 +55,7 @@ margin-top: 3rem;
             }
         }
 
-& div:nth-child(5) {
+& div:nth-child(3) {
     & ul[role="list"] {
 margin-top: 2rem;
     }
@@ -167,78 +167,84 @@ margin-top: 2rem;
             justify-content: center;
             margin-inline: auto;
             overflow: hidden;
-position: relative;
 
-& .s1 {
-    position: absolute;
-    top: 7.5rem;
-    left: 10rem;
-}
-
-& .s2 {
-    position: absolute;
-    left: 10rem;
-    top: 10rem;
-}
-
-& .s3 {
-    position: absolute;
-    bottom: 3rem;
-    right: 14rem;
-}
-
-& .s4 {
-    position: absolute;
-    right: 16.25rem;
-    bottom: 2.75rem;
-}
-
-           & img[src*="star"] {
-            aspect-ratio: 1;
-            width: 1.5rem;
-           }
-
-            & img + img[src*="star"] {
-                width: .875rem;
-            }
 
             
-            & .card {
-                width: 18rem;
-                height: 26rem;
-                transition: scale 600ms ease, background-color 500ms ease;
-                & h2 + span {
-                    line-height: 100%;
-                }
-                & a {
-                    max-width: 14rem;
-                }
-                &:nth-child(3) {
-                    rotate: -8deg;
-                    transform: translate(.25rem, 2.5rem);
-                    z-index: 0;
-                }
-                
-                &:nth-child(4) {
-                    z-index: 1;
-                    position: relative;
-                    & .rbbt {
-                        position: absolute;
-                        top: -3.25rem;
-                        left: 2rem;
-                    }
-                }
+            & img[src*="star"] {
+                aspect-ratio: 1;
+                width: 1.5rem;
+                transition: rotate 500ms;
+            }
+            
+            & img + img[src*="star"] {
+                width: .875rem;
+}
 
-                &:nth-child(5) {
-                    rotate: 8deg;
-                    transform: translate(-.25rem, 2.5rem);
-                    z-index: 0;
+
+& .card {
+    width: 18rem;
+    height: 26rem;
+    transition: scale 600ms ease, background-color 500ms ease;
+    & h2 + span {
+        line-height: 100%;
+    }
+    & a {
+        max-width: 14rem;
+    }
+    &:nth-child(1) {
+        rotate: -8deg;
+        transform: translate(.25rem, 2.5rem);
+        z-index: 0;
+        position: relative;
+        & .s1 {
+            position: absolute;
+            top: -1rem;
+            left: -1.5rem;
+        }
+        & .s2 {
+            position: absolute;
+            left: -2rem;
+            top: 1rem;
+        }
+    }
+    
+    &:nth-child(2) {
+        z-index: 1;
+        position: relative;
+        & .rbbt {
+            position: absolute;
+            top: -3.25rem;
+            left: 2rem;
+        }
+    }
+    
+    &:nth-child(3) {
+        rotate: 8deg;
+        transform: translate(-.25rem, 2.5rem);
+        z-index: 0;
+        position: relative;
+        & .s3 {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+        }
+        
+        & .s4 {
+            position: absolute;
+            right: 0.5rem;
+            bottom: -2rem;
+        }
                 }
             
 &:hover {
-   scale: 1.02;
+   scale: 1.05;
    background-color: var(--shape-hover);
 z-index: 2;
+
+& img[src*="star"] {
+    rotate: 30deg;
+}
+
 }
 
             }

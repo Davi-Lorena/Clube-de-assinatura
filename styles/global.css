@@ -28,8 +28,14 @@
 
 }
 
+html {
+    overflow-x: none;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--shape-background);
+    overflow-x: hidden;
 }
 
 a {
@@ -43,6 +49,6 @@ ul[role="list"] {
 
 @media (width >= 80em) {
     :root{
-        --max-width: 80em
+        --max-width: 80em;
 }
 }
