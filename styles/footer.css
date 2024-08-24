@@ -1,0 +1,114 @@
+footer {
+    margin-top: 6.5rem;
+    max-width: var(--max-width);
+margin-inline: auto;
+background: url(../assets/images/book-trace-background.png) no-repeat center/cover;
+padding-block: 6rem 2rem;
+
+gap: 2.5rem;
+
+& div:nth-child(1) {
+    justify-self: center;
+    justify-content: center;
+    gap: .75rem;
+& img[src*="logo"] {
+    width: 10rem;
+    justify-self: center;
+}
+
+& .flex {
+    width: 20rem;
+    border-top: 1px solid var(--shape-stroke);
+padding-top: .75rem;
+justify-content: space-evenly;
+
+& a {
+    z-index: 0;
+    position: relative;
+    border-radius: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & svg path {
+        transition: fill 400ms ease;
+} 
+
+&::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: inherit;
+    height: inherit;
+    background-color: var(--shape-stroke);
+top: 0;
+left: 0;
+border-radius:inherit;
+scale: 0;
+transition: scale 200ms ease;
+}
+
+&:hover {
+    & svg path {
+        fill: #FFFFFF;
+    }
+
+    &::after {
+        scale: 100%;
+    }
+}
+
+
+}
+
+}
+}
+
+& div:nth-child(2) {
+grid-template-columns: 1fr 1fr;
+
+& div {
+    margin-left: .75rem;
+}
+
+
+    & h3 {
+        color: var(--text-body);
+        font: 600 1rem/1 var(--font-family);
+        margin-bottom: 1.25rem;
+    }
+    
+    & li {
+        font: 500 .875rem/1 var(--font-family);
+        color: var(--blue-light);
+        transition: color 400ms ease;
+
+&:hover { 
+    color: var(--text-body);
+}
+
+    }
+}
+
+
+
+
+}
+
+@media (width >= 80em) {
+footer {
+    padding-block: 11rem 7rem;
+    grid-auto-flow: column;
+& div:nth-child(1) {
+    
+    & img[src*="logo"] {
+        width: 16.5rem;
+    }
+}
+
+
+    
+}
+
+}
