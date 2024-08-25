@@ -13,7 +13,7 @@ animation: bg 1.5s ease-out both;
     height: 60%;
     left: 0;
     bottom: -3rem;
-    filter: blur(150px);
+    filter: blur(250px);
     background-color: var(--pink-low);
 }
 
@@ -24,7 +24,7 @@ animation: bg 1.5s ease-out both;
     height: 80%;
     right: 0;
     bottom: -12rem;
-    filter: blur(150px);
+    filter: blur(250px);
     background-color: var(--pink-low);
 }
 
@@ -112,13 +112,13 @@ opacity: 0;
 &::before {
     left: 0;
     bottom: -3rem;
-    filter: blur(300px);
+    filter: blur(800px);
 }
 
 &::after {
     right: 0;
     bottom: -12rem;
-    filter: blur(300px);
+    filter: blur(800px);
 }
 
         & nav {

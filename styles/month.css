@@ -119,6 +119,7 @@ right: 1rem;
 
 @media (width >= 80em) {
     #month {
+        margin-bottom: 20rem;
         & div:nth-child(1) {
             & img {
                 width: 2rem;

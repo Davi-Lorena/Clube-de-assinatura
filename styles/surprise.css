@@ -3,6 +3,9 @@
   margin-inline: auto;
   padding-block: 4rem 2rem;
 position: relative;
+opacity: 0;
+animation: surprise 1s 750ms ease-out both;
+
   &::before {
     content: "";
     position: absolute;
@@ -11,7 +14,7 @@ position: relative;
     left: 3rem;
     bottom: 4.5rem;
   z-index: -2;
-    filter: blur(150px);
+    filter: blur(350px);
     background-color: var(--pink-low);
 }
 
@@ -51,15 +54,26 @@ position: relative;
   }
 }
 
+@keyframes surprise {
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (width >= 80em) {
   #surprise {
+    margin-bottom: 10rem;
     padding-block: 7.5rem;
     & div + div {
       display: none;
     }
 
     &::before {
-      filter: blur(500px);
+      opacity: 0.7;
+      filter: blur(1000px);
       left: 5rem;
     bottom: 4.5rem;
     }

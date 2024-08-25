@@ -26,14 +26,17 @@ filter: blur(200px);
     }
     
     & h1 + div {
+        justify-content: center;
+        align-items: center;
         z-index: 1;
-        margin-left: 3.5rem;
-        overflow-x: scroll;
-        margin-right: 3.5rem;
-&::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-}
+        margin-inline: auto;
+        max-width: var(--max-width);
+        flex-direction: column;
+
+            & img[src*="star"] {
+                transition: rotate 500ms;
+            }
+
         & div:nth-child(2) {
             border-color: var(--shape-hover);
             background-color: var(--shape-hover);
@@ -86,7 +89,7 @@ margin-top: 2rem;
     background-color: var(--shape-base);
     padding: 2rem;
     font-family: var(--font-family);
-    
+    transition: scale 600ms ease, background-color 500ms ease;
     & span:nth-child(1) {
         font-size: 1rem;
         font-weight: 600;
@@ -165,6 +168,16 @@ margin-top: 2rem;
         }
     }
     
+&:hover {
+    scale: 1.05;
+   background-color: var(--shape-hover);
+z-index: 2;
+
+& img[src*="star"] {
+    rotate: 30deg;
+}
+}
+
         }
     }
 }
@@ -183,13 +196,13 @@ margin-top: 2rem;
             justify-content: center;
             margin-inline: auto;
             overflow: hidden;
-
+flex-direction: row;
 
             
             & img[src*="star"] {
                 aspect-ratio: 1;
                 width: 1.5rem;
-                transition: rotate 500ms;
+                
             }
             
             & img + img[src*="star"] {
@@ -200,7 +213,7 @@ margin-top: 2rem;
 & .card {
     width: 18rem;
     height: 26rem;
-    transition: scale 600ms ease, background-color 500ms ease;
+  
     & h2 + span {
         line-height: 100%;
     }
@@ -251,18 +264,7 @@ margin-top: 2rem;
             bottom: -2rem;
         }
                 }
-            
-&:hover {
-   scale: 1.05;
-   background-color: var(--shape-hover);
-z-index: 2;
-
-& img[src*="star"] {
-    rotate: 30deg;
-}
-
-}
-
+    
             }
         }
     }

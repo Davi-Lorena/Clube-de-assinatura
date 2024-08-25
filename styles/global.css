@@ -29,7 +29,7 @@
 }
 
 html {
-    overflow-x: none;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -51,4 +51,11 @@ ul[role="list"] {
     :root{
         --max-width: 80em;
 }
+}
+
+@media (width <= 400px) {
+    body {
+        max-width: var(--max-width);
+        margin-inline: auto;
+    }
 }
