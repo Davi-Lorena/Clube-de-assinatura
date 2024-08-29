@@ -182,7 +182,7 @@ z-index: 2;
     }
 }
 
-@media (width >= 80em) {
+@media (width >= 64em) {
     #price {
         & h1 {
             font-size: 2rem;
@@ -269,6 +269,84 @@ flex-direction: row;
         }
     }
 }
+
+@media (750px <= width < 64em) {
+    #price {
+        & h1 {
+            font-size: 2rem;
+            margin-bottom: 5.5rem;
+        }
+
+            & img[src*="star"] {
+                aspect-ratio: 1;
+                width: 1.5rem;
+                
+            }
+            
+            & img + img[src*="star"] {
+                width: .875rem;
+}
+
+& h1 + div { 
+justify-content: center;
+gap: 2rem;
+flex-direction: row;
+flex-wrap: wrap;
+& .card {
+    width: 18rem;
+    height: 26rem;
+  
+    & h2 + span {
+        line-height: 100%;
+    }
+    & a {
+        max-width: 14rem;
+    }
+    &:nth-child(1) {
+        z-index: 0;
+        position: relative;
+        & .s1 {
+            position: absolute;
+            top: -1rem;
+            left: -1.5rem;
+        }
+        & .s2 {
+            position: absolute;
+            left: -2rem;
+            top: 1rem;
+        }
+    }
+    
+    &:nth-child(2) {
+        z-index: 1;
+        position: relative;
+        & .rbbt {
+            position: absolute;
+            top: -3.25rem;
+            left: 2rem;
+        }
+    }
+    
+    &:nth-child(3) {
+        z-index: 0;
+        position: relative;
+        & .s3 {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+        }
+        
+        & .s4 {
+            position: absolute;
+            right: 0.5rem;
+            bottom: -2rem;
+        }
+                }
+    
+        }
+    } }
+}
+
 
 
 

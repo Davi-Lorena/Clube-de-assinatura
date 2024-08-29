@@ -18,7 +18,7 @@
     gap: 1rem;
 }
 
-@media (width >=80em) {
+@media (width >= 750px) {
     .desktop-only {
         display: inline-block;
     }

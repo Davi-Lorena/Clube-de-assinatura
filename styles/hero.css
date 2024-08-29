@@ -105,7 +105,7 @@ opacity: 0;
 }
 }
 
-@media (width >= 80em) {
+@media (width >= 64em) {
     #hero {
         padding-bottom: 24rem;
 
@@ -124,18 +124,10 @@ opacity: 0;
         & nav {
             padding: 3.5rem;
 
-& img + img {
-    display: none;
-}
-
         }
 
 & header {
     padding-top: 10.25rem;
-
-& h1 + h1, p + p {
-    display: none;
-}
 
     & h1 {
         font-size: 3rem;
@@ -147,6 +139,20 @@ opacity: 0;
     }
 }
 
+    }
+}
+
+@media (750px <= width) {
+    #hero {
+
+& nav {
+    padding: 2.5rem;
+}
+
+        & h1 + h1, p + p, img + img {
+            display: none;
+
+        }
     }
 }
 

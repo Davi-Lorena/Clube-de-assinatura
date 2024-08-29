@@ -47,15 +47,21 @@ ul[role="list"] {
     list-style: none;
 }
 
-@media (width >= 80em) {
+@media (width >= 64em) {
     :root{
         --max-width: 80em;
 }
 }
 
-@media (width <= 400px) {
+@media (width <= 390px) {
     body {
         max-width: var(--max-width);
         margin-inline: auto;
+    }
+}
+
+@media (750px <= width < 64em) {
+    :root {
+        --max-width: 1024px;
     }
 }

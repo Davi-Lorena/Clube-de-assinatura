@@ -65,7 +65,7 @@ transition: scale 200ms ease;
 }
 }
 
-& div:nth-child(2) {
+& .foot {
     max-width: var(--max-width);
    justify-self: center;
 grid-template-columns: 1fr 1fr;
@@ -93,25 +93,28 @@ margin-inline: auto;
     }
 }
 
-
-
-
 }
 
-@media (width >= 80em) {
-footer {
-    
-    padding-block: 11rem 7rem;
-    grid-auto-flow: column;
-& div:nth-child(1) {
-    
-    & img[src*="logo"] {
-        width: 16.5rem;
+@media (width <= 320px) {
+    footer {
+        & .foot {
+            & div:nth-child(2) {
+            padding: 0;
+           margin-bottom: 2rem;
+        }
+    } }
+}
+
+@media (750px <= width) {
+    footer {
+        padding-block: 11rem 7rem;
+        grid-auto-flow: column;
+    & div:nth-child(1) {
+        
+        & img[src*="logo"] {
+            width: 16.5rem;
+        }
     }
-}
-
-
     
-}
-
+    }
 }

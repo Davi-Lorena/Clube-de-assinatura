@@ -63,9 +63,8 @@ animation: surprise 1s 750ms ease-out both;
   }
 }
 
-@media (width >= 80em) {
+@media (width > 64em) {
   #surprise {
-    margin-bottom: 10rem;
     padding-block: 7.5rem;
     & div + div {
       display: none;
@@ -209,6 +208,156 @@ animation: surprise 1s 750ms ease-out both;
   }
 }
 
+@media (width <= 320px) {
+  div + div {
+    padding: 1rem;
+  }
+}
 
-
+  @media (750px <= width <= 64em) {
+    #surprise {
+      margin-bottom: 3rem;
+      padding-block: 7.5rem;
+      & div + div {
+        display: none;
+      }
+  
+      &::before {
+        opacity: 0.7;
+        filter: blur(400px);
+        left: 5rem;
+      bottom: 4.5rem;
+      }
+  
+      & .desktop-only {
+  
+        & img[src*="book"] {
+          height: 5.5rem;
+          transform: rotate(21deg);
+          margin-inline: auto;
+          transform: scale(0);
+          rotate: 20deg;
+          transition: transform 200ms, scale 500ms ease, rotate 500ms ease;
+  
+          &:hover {
+            rotate: 25deg;
+            scale: 1.1;
+          }
+  
+        }
+  
+        & h2 {
+         text-align: center;
+          font: 400 1.5rem/200% var(--font-family);
+          color: var(--text-body);
+  
+          & span {
+            opacity: 0.5;
+          }
+  
+          & span:nth-child(1) {
+            transition: opacity 200ms;
+  
+            & b {
+              transition: color 200ms;
+            }
+          }
+  
+          & span:nth-child(2) {
+            transition: opacity 200ms;
+            transition-delay: 0.5s;
+            & b {
+              transition: color 200ms;
+              transition-delay: 0.5s;
+            }
+          }
+  
+          & span:nth-child(3) {
+            transition: opacity 200ms;
+            transition-delay: 1s;
+            & b {
+              transition: color 200ms;
+              transition-delay: 1s;
+            }
+          }
+  
+          & b {
+            color: var(--text-title);
+            font-weight: 500;
+          }
+        }
+  
+        & img {
+          aspect-ratio: 1;
+        }
+  
+        & div {
+          margin-top: 0rem;
+          justify-content: space-between;
+        }
+  
+        & img[src*="planchette"] {
+          height: 5rem;
+          transform: rotate(100deg);
+          transform: scale(0);
+          rotate: 100deg;
+          transition: transform 200ms 0.5s, scale 500ms ease, rotate 500ms ease;
+  
+          &:hover {
+            rotate: 110deg;
+            scale: 1.1;
+          }
+  
+        }
+        & img[src*="crystal"] {
+          height: 4.5rem;
+          transform: rotate(15deg);
+          transform: scale(0);
+          rotate: -15deg;
+          transition: transform 200ms 1s, scale 500ms ease, rotate 500ms ease;
+  
+  
+          &:hover {
+            rotate: -5deg;
+            scale: 1.1;
+          }
+        }
+  
+      }
+      &:hover {
+        & img[src*="book"] {
+          transform: scale(1);
+        }
+  
+        & img[src*="planchette"] {
+          transform: scale(1);
+        }
+  
+        & img[src*="crystal"] {
+          transform: scale(1);
+        }
+  
+        & span:nth-child(1) {
+          opacity: 1;
+          & b {
+            color: var(--blue-light);
+          }
+        }
+  
+        & span:nth-child(2) {
+          opacity: 1;
+          & b {
+            color: var(--blue-light);
+          }
+        }
+  
+        & span:nth-child(3) {
+          opacity: 1;
+          & b {
+            color: var(--blue-light);
+          }
+        }
+      }
+    }
+  }
 
