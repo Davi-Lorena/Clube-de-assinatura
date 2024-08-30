@@ -14,9 +14,6 @@ The project is a landing page for a supposed book subscription club. It was deve
 ## About the development 
 By developing this project, I was able to improve my knowledge and skills in the technologies used, with emphasis on CSS, in which I had to overcome many challenges and explore different and incredible forms of beautification.
 
-
-![Livros](https://github.com/user-attachments/assets/2f6bfdbd-4387-414d-83ab-ba2fbf94c55b)
-
 ## Features 💻
 - Responsive layout: adapted to various screen sizes.
 - Exclusive details: variations in styling for a few different screens.
