@@ -31,11 +31,13 @@ animation: surprise 1s 750ms ease-out both;
       margin-bottom: 0.25rem;
       justify-self: end;
       margin-right: 2.5rem;
+      animation: scaleTotal 8s 6s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
     }
 
     & img[src*="crystal"] {
       transform: rotate(15deg);
       justify-self: end;
+      animation: scaleTotal 8s 10s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
     }
 
     & h2 {
@@ -50,16 +52,27 @@ animation: surprise 1s 750ms ease-out both;
       transform: rotate(-30deg);
       left: 1.5rem;
       top: 70%;
+      animation: scaleTotal 
+      8s 6s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
     }
   }
 }
 
 @keyframes surprise {
-  50% {
-    scale: 1.1;
-  }
+
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes scaleTotal {
+  50% {
+      scale: 1.2;
+      rotate: 15deg;
+  }
+
+  75% {
+      scale: 1;
   }
 }
 

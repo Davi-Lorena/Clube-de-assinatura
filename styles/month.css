@@ -1,405 +1,608 @@
 #month {
-    max-width: var(--max-width);
-    margin-inline: auto;
-    padding-block: 6.5rem 6rem;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-block: 6.5rem 6rem;
 
-    & div:nth-child(1) {
-        text-align: center;
-        gap: .5rem;
-        & img {
-            width: 1.25rem;
-            aspect-ratio: 1;
-            /* box-shadow: 0px 0px 28px rgba(143, 59, 158, 0.5); */
-            
-/* nesse caso, o filter com shadow vai atender ao que queremos e aplicar a sombra na imagem, ao contrário do box-shadow, que aplicaria na caixa */
+  & div:nth-child(1) {
+    text-align: center;
+    gap: 0.5rem;
+    & img {
+      width: 1.25rem;
+      aspect-ratio: 1;
+      /* box-shadow: 0px 0px 28px rgba(143, 59, 158, 0.5); */
 
-filter: drop-shadow(0px 0px 1rem var(--pink-base));
+      /* nesse caso, o filter com shadow vai atender ao que queremos e aplicar a sombra na imagem, ao contrário do box-shadow, que aplicaria na caixa */
 
-        }
-
-        & h1 {
-            justify-content: center;
-            gap: 0.75rem;
-            color: var(--text-title);
-            font: 600 1.5rem/100% var(--font-family);
-        }
-
-        & p {
-            color: var(--text-body);
-            font: 400 .875rem/1.4 var(--font-family);
-        }
+      filter: drop-shadow(0px 0px 1rem var(--pink-base));
     }
 
-    & div:nth-child(2) {
+    & h1 {
+      justify-content: center;
+      gap: 0.75rem;
+      color: var(--text-title);
+      font: 600 1.5rem/100% var(--font-family);
+    }
 
-        justify-content: center;
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-        background-color: var(--pink-low);
-    filter: blur(120px);
-    width: 80%;
-    height: 80%;
-    bottom: -1.5rem;
-    left: 5rem;
-    z-index: -1;
+    & p {
+      color: var(--text-body);
+      font: 400 0.875rem/1.4 var(--font-family);
+    }
+  }
+
+  & div:nth-child(2) {
+    justify-content: center;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: var(--pink-low);
+      filter: blur(120px);
+      width: 80%;
+      height: 80%;
+      bottom: -1.5rem;
+      left: 5rem;
+      z-index: -1;
     }
     & img {
-        object-fit: cover;
-        margin-top: 6.5rem;
+      object-fit: cover;
+      margin-top: 6.5rem;
     }
 
     & img[src*="bookcastle"] {
-    width: 10rem;
-    height: 14rem;
-z-index: 1;
+      width: 10rem;
+      height: 14rem;
+      z-index: 1;
+    }
 
-}
-
-& img:not([src*="bookcastle"]), span {
-    position: absolute;
-    z-index: -1;
-}
+    & img:not([src*="bookcastle"]),
+    span {
+      position: absolute;
+      z-index: -1;
+    }
 
     & img[src*="yellow"] {
-        width: 5rem;
         transform: rotate(12deg);
-        bottom: 3.5rem;
-        right: 3rem;
-        z-index: 0;
+        width: 2rem;
+      bottom: 2rem;
+      right: 8rem;
+      z-index: 0;
+      animation: yellowBm 20s 4s ease-in-out infinite;
     }
     & img[src*="purple"] {
-        width: 5rem;
- transform: rotate(22deg);
- right: 0.15rem;
- bottom: .75rem;
+      transform: rotate(22deg);
+      width: 2rem;
+      right: 8rem;
+      bottom: 1rem;
+      animation: purpleBm 20s 4s ease-in-out infinite;
     }
     & img[src*="pin"] {
-        height: 5.25rem;
-        transform: rotate(-8deg);
-    bottom: -1.75rem;
-    left: 3.75rem;
+      height: 5.25rem;
+      transform: rotate(-8deg);
+      bottom: 2rem;
+      left: 8rem;
+      animation: pin 20s 5.5s ease-in-out infinite;
     }
     & img[src*="seta-1"] {
-        width: 4rem;
-        top: -0.5rem;
-        left: 3.25rem;
+      width: 4rem;
+      top: 5rem;
+      left: 8rem;
+      animation: arrowOne 20s 2s ease-in-out infinite;
     }
     & img[src*="seta-2"] {
-        height: 3rem;
-bottom: 2.5rem;
-left: 2.5rem;
+      height: 3rem;
+      bottom: 1rem;
+      left: 8rem;
+      animation: arrowTwo 20s 5.5s ease-in-out infinite;
     }
     & img[src*="seta-3"] {
-        width: 3rem;
-        bottom: -1rem;
-        right: 2rem;
+      width: 3rem;
+      bottom: 1rem;
+      right: 8rem;
+      animation: arrowTr 20s 4s ease-in-out infinite;
     }
 
+    & span {
+      color: var(--text-body);
+      font: 300 0.625rem/100% var(--font-family);
 
-& span {
-    color: var(--text-body);
-    font: 300 .625rem/100% var(--font-family);
+      &:nth-child(8) {
+        top: 8rem;
+        left: 8rem;
+        animation: spanOne 20s 2s ease-in-out infinite;
+      }
 
-    &:nth-child(8) {
-        top: 4.75rem;
-        left: .5rem;
+      &:nth-child(9) {
+        bottom: 6rem;
+        left: 8rem;
+        animation: spanTwo 20s 5.5s ease-in-out infinite;
+      }
+
+      &:nth-child(10) {
+        bottom: 5rem;
+        right: 7rem;
+        animation: spanTr 20s 4s ease-in-out infinite;
+      }
     }
+  }
+}
 
-    &:nth-child(9) {
-     bottom: 6rem;
-     left: 1.5rem;
-    }
+@keyframes arrowOne {
+  10% {
+    top: -0.5rem;
+    left: 3.25rem;
+  }
 
-    &:nth-child(10) {
-bottom: -2rem;
-right: 1rem;
-    }
+  50% {
+    top: -0.5rem;
+    left: 3.25rem;
+  }
 
+  75% {
+    top: -0.5rem;
+    left: 3.25rem;
+  }
+
+  80% {
+    top: 5rem;
+      left: 8rem;
+  }
+
+}
+
+@keyframes spanOne {
+  10% {
+    top: 4.75rem;
+    left: 0.5rem;
+  }
+  50% {
+    top: 4.75rem;
+    left: 0.5rem;
+  }
+  75% {
+    top: 4.75rem;
+    left: 0.5rem;
+  }
+
+  80% {
+    top: 10rem;
+        left: 8rem;
+  }
+
+}
+
+@keyframes yellowBm {
+  10% {
+    bottom: 3.5rem;
+    right: 3rem;
+    width: 5rem;
+  }
+  50% {
+    bottom: 3.5rem;
+    right: 3rem;
+    width: 5rem;
+  }
+  75% {
+    bottom: 3.5rem;
+    right: 3rem;
+    width: 5rem;
+  }
+
+80% {
+    width: 2rem;
+    bottom: 2rem;
+    right: 8rem;
 }
 
 }
 
+@keyframes purpleBm {
+  10% {
+    width: 5rem;
+    right: 0.15rem;
+    bottom: 0.75rem;
+  }
+  50% {
+    width: 5rem;
+    right: 0.15rem;
+    bottom: 0.75rem;
+  }
+  75% {
+    width: 5rem;
+    right: 0.15rem;
+    bottom: 0.75rem;
+  }
+
+  80% {
+    width: 2rem;
+      right: 8rem;
+      bottom: 1rem;
+  }
 }
 
+@keyframes arrowTr {
+  10% {
+    bottom: -1rem;
+    right: 2rem;
+  }
+  50% {
+    bottom: -1rem;
+    right: 2rem;
+  }
+  75% {
+    bottom: -1rem;
+    right: 2rem;
+  }
+
+80% {
+    bottom: 5rem;
+        right: 7rem;
+}
+
+}
+
+@keyframes spanTr {
+  10% {
+    bottom: -2rem;
+    right: 1rem;
+  }
+  50% {
+    bottom: -2rem;
+    right: 1rem;
+  }
+  75% {
+    bottom: -2rem;
+    right: 1rem;
+  }
+
+  80% {
+    bottom: 5rem;
+        right: 7rem;
+  }
+}
+
+@keyframes arrowTwo {
+  10% {
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+  50% {
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+  75% {
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+
+  80% {bottom: 6rem;
+    left: 8rem;}
+
+}
+@keyframes spanTwo {
+  10% {bottom: 6rem;
+    left: 1.5rem;
+  }
+  50% {bottom: 6rem;
+    left: 1.5rem;
+  }
+  75% {bottom: 6rem;
+    left: 1.5rem;
+  }
+  80% {
+    bottom: 6rem;
+        left: 8rem;
+  }
+}
+
+@keyframes pin {
+  10% {
+    bottom: -1.75rem;
+      left: 3.75rem;
+  }
+  50% {bottom: -1.75rem;
+    left: 3.75rem;
+  }
+  75% {bottom: -1.75rem;
+    left: 3.75rem;
+  }
+  80% {
+    bottom: 6rem;
+        left: 8rem;
+  }
+}
 
 @media (width >= 80em) {
-    #month {
-        margin-bottom: 8rem;
-        & div:nth-child(1) {
-            & img {
-                width: 2rem;
-            }
+  #month {
+    margin-bottom: 8rem;
+    & div:nth-child(1) {
+      & img {
+        width: 2rem;
+      }
 
-            & h1 {
-                font-size: 2rem;
-            }
+      & h1 {
+        font-size: 2rem;
+      }
 
-        & p {
-            font-size: 1rem;
-        }
-
-        }
-
-        & div:nth-child(2) {
-
-&::before {
-    filter: blur(700px);
-    left: 10rem;
-}
-
-            & img {
-                margin-top: 13.5rem;
-            }
-
-& span {
-  font-size: 1rem;
-  line-height: 1.4;
-
-  &:nth-child(8) {
-    top: 20rem;
-    left: 35rem;
-    transition: transform 500ms ease;
-}
-
-&:nth-child(9) {
- bottom: 20rem;
- left: 40rem;
- transition: transform 500ms ease;
-}
-
-&:nth-child(10) {
-bottom: 10rem;
-right: 35rem;
-transition: transform 500ms ease;
-}
-
-}
-
-            & img[src*="bookcastle"] {
-                width: 26rem;
-                height: 36rem;
-            }
-            & img[src*="yellow"] {
-                width: 10.5rem;
-                right: 35rem;
-                transition: transform 500ms ease;
-                rotate: 12deg;
-            }
-            & img[src*="purple"] {
-                width: 10.5rem;
-                right: 35rem;
-                bottom: 5rem;
-                transition: transform 500ms ease, rotate 500ms ease;
-            }
-            & img[src*="pin"] {
-                height: 16rem;
-                left: 35rem;
-                transition: transform 500ms ease;
-                rotate: -8deg;
-            }
-            & img[src*="seta-1"] {
-                width: 10.5rem;
-                left: 35rem;
-                top: 15rem;
-                transition: transform 500ms ease;
-            }
-            & img[src*="seta-2"] {
-                height: 8rem;
-                left: 35rem;
-                transition: transform 500ms ease;
-            }
-            & img[src*="seta-3"] {
-                width: 9rem;
-                right: 35rem;
-                bottom: 15rem;
-                transition: transform 500ms ease;
-            }
-
-
-            &:hover {
-
-                & span {
-                            &:nth-child(8) {
-                      transform: translate(-21rem, -9.5rem);
-                  }
-
-                  &:nth-child(9) {
-                   transform: translate(-25rem, 5rem);
-                  }
-
-                  &:nth-child(10) {
-                  transform: translate(15rem, 13rem);
-                  } }
-
-            & img[src*="yellow"] {
-               transform: translate(13.5rem, -12rem);
-            }
-            & img[src*="purple"] {
-                transform: translate(19.5rem, -9rem);
-                rotate: 22deg;
-            }
-            & img[src*="pin"] {
-                transform: translate(-18rem, 2rem);
-            }
-            & img[src*="seta-1"] {
-              transform: translate(-16.5rem, -16rem);
-            }
-            & img[src*="seta-2"] {
-                transform: translate(-20rem, -3.85rem);
-            }
-            & img[src*="seta-3"] {
-                transform: translate(18rem, 16rem);
-            }
-        }
-
-        }
+      & p {
+        font-size: 1rem;
+      }
     }
+
+    & div:nth-child(2) {
+      &::before {
+        filter: blur(700px);
+        left: 10rem;
+      }
+
+      & img {
+        margin-top: 13.5rem;
+      }
+
+      & span {
+        font-size: 1rem;
+        line-height: 1.4;
+
+        &:nth-child(8) {
+          top: 20rem;
+          left: 35rem;
+          transition: transform 500ms ease;
+          animation: none;
+        }
+
+        &:nth-child(9) {
+          bottom: 20rem;
+          left: 40rem;
+          transition: transform 500ms ease;
+          animation: none;
+        }
+
+        &:nth-child(10) {
+          bottom: 10rem;
+          right: 35rem;
+          transition: transform 500ms ease;
+          animation: none;
+        }
+      }
+
+      & img[src*="bookcastle"] {
+        width: 26rem;
+        height: 36rem;
+        animation: none;
+      }
+      & img[src*="yellow"] {
+        width: 10.5rem;
+        right: 35rem;
+        transition: transform 500ms ease;
+        rotate: 12deg;
+        animation: none;
+      }
+      & img[src*="purple"] {
+        width: 10.5rem;
+        right: 35rem;
+        bottom: 5rem;
+        transition: transform 500ms ease, rotate 500ms ease;
+        animation: none;
+      }
+      & img[src*="pin"] {
+        height: 16rem;
+        left: 35rem;
+        transition: transform 500ms ease;
+        rotate: -8deg;
+        animation: none;
+      }
+      & img[src*="seta-1"] {
+        width: 10.5rem;
+        left: 35rem;
+        top: 15rem;
+        transition: transform 500ms ease;
+        animation: none;
+      }
+      & img[src*="seta-2"] {
+        height: 8rem;
+        left: 35rem;
+        bottom: 5rem;
+        transition: transform 500ms ease;
+        animation: none;
+      }
+      & img[src*="seta-3"] {
+        width: 9rem;
+        right: 35rem;
+        bottom: 15rem;
+        transition: transform 500ms ease;
+        animation: none;
+      }
+
+      &:hover {
+        & span {
+          &:nth-child(8) {
+            transform: translate(-21rem, -9.5rem);
+          }
+
+          &:nth-child(9) {
+            transform: translate(-25rem, 2rem);
+          }
+
+          &:nth-child(10) {
+            transform: translate(15rem, 13rem);
+          }
+        }
+
+        & img[src*="yellow"] {
+          transform: translate(13.5rem, -12rem);
+        }
+        & img[src*="purple"] {
+          transform: translate(19.5rem, -9rem);
+          rotate: 22deg;
+        }
+        & img[src*="pin"] {
+          transform: translate(-18rem, 2rem);
+        }
+        & img[src*="seta-1"] {
+          transform: translate(-16.5rem, -16rem);
+        }
+        & img[src*="seta-2"] {
+          transform: translate(-20rem, -4.75rem);
+        }
+        & img[src*="seta-3"] {
+          transform: translate(18rem, 16rem);
+        }
+      }
+    }
+  }
 }
 
 @media (width <= 320px) {
-    #month {
+  #month {
     div:nth-child(2) {
-       
-       & img {
+      & img {
         margin-top: 3.25rem;
-       }
+      }
 
-       & img[src*="yellow"] {
+      & img[src*="yellow"] {
         width: 4.5rem;
         transform: rotate(15deg);
         bottom: 5rem;
         right: 1.75rem;
         z-index: 0;
-    }
-    & img[src*="purple"] {
+        animation: none;
+      }
+      & img[src*="purple"] {
         width: 4.5rem;
- transform: rotate(22deg);
- right: -0.5rem;
- bottom: 1.75rem;
-    }
-    & img[src*="pin"] {
+        transform: rotate(22deg);
+        right: -0.5rem;
+        bottom: 1.75rem;
+        animation: none;
+      }
+      & img[src*="pin"] {
         height: 5.25rem;
         transform: rotate(-8deg);
-    bottom: -1rem;
-    left: 2rem;
-    }
-    & img[src*="seta-1"] {
+        bottom: -1rem;
+        left: 2rem;
+        animation: none;
+      }
+      & img[src*="seta-1"] {
         width: 4rem;
-        top: .5rem;
+        top: 0.5rem;
         left: 1.5rem;
-    }
-    & img[src*="seta-2"] {
+        animation: none;
+      }
+      & img[src*="seta-2"] {
         height: 3rem;
-bottom: 3.25rem;
-left: .75rem;
-    }
-    & img[src*="seta-3"] {
+        bottom: 3.25rem;
+        left: 0.75rem;
+        animation: none;
+      }
+      & img[src*="seta-3"] {
         width: 3rem;
         bottom: 0rem;
         right: 1rem;
+        animation: none;  
     }
 
+      & span {
+        color: var(--text-body);
+        font: 300 0.625rem/100% var(--font-family);
 
-& span {
-    color: var(--text-body);
-    font: 300 .625rem/100% var(--font-family);
+        &:nth-child(8) {
+          top: 2.75rem;
+          left: 0rem;
+          animation: none;
+        }
 
-    &:nth-child(8) {
-        top: 2.75rem;
-        left: 0rem;
+        &:nth-child(9) {
+          bottom: 6.5rem;
+          left: 0rem;
+          animation: none;
+        }
+
+        &:nth-child(10) {
+          bottom: -1rem;
+          right: 1rem;
+          animation: none;
+        }
+      }
     }
-
-    &:nth-child(9) {
-     bottom: 6.5rem;
-     left: 0rem;
-    }
-
-    &:nth-child(10) {
-bottom: -1rem;
-right: 1rem;
-    }
-
-}
-
-    }
-}
+  }
 }
 
 @media (750px <= width < 80em) {
-    #month {
-        & div:nth-child(2) {
-            padding-top: 0;
-            max-width: max-content;
-margin-inline: auto;
-&::before {
-    left: 9rem;
-}
+  #month {
+    & div:nth-child(2) {
+      padding-top: 0;
+      max-width: max-content;
+      margin-inline: auto;
+      &::before {
+        left: 9rem;
+      }
 
-            & img[src*="bookcastle"] {
-                width: 15rem;
-                height: 18rem;
-            z-index: 1;
-            }
-            & img[src*="yellow"] {
-                width: 6.5rem;
-                transform: rotate(12deg);
-                bottom: 4.5rem;
-                right: -4.25rem;
-                z-index: 0;
-            }
-            & img[src*="purple"] {
-                width: 6.5rem;
-         transform: rotate(22deg);
-         right: -8rem;
-         bottom: .75rem;
-            }
-            & img[src*="pin"] {
-                height: 8.5rem;
-                transform: rotate(-8deg);
-            bottom: -4.5rem;
-            left: -4.5rem;
-            }
-            & img[src*="seta-1"] {
-                width: 7rem;
-                top: -1.5rem;
-                left: -5.5rem;
-            }
-            & img[src*="seta-2"] {
-                height: 6.5rem;
+      & img[src*="bookcastle"] {
+        width: 15rem;
+        height: 18rem;
+        z-index: 1;
+      }
+      & img[src*="yellow"] {
+        width: 6.5rem;
+        transform: rotate(12deg);
+        bottom: 4.5rem;
+        right: -4.25rem;
+        z-index: 0;
+        animation: none;
+      }
+      & img[src*="purple"] {
+        width: 6.5rem;
+        transform: rotate(22deg);
+        right: -8rem;
+        bottom: 0.75rem;
+        animation: none;
+      }
+      & img[src*="pin"] {
+        height: 8.5rem;
+        transform: rotate(-8deg);
+        bottom: -4.5rem;
+        left: -4.5rem;
+        animation: none;
+      }
+      & img[src*="seta-1"] {
+        width: 7rem;
+        top: -1.5rem;
+        left: -5.5rem;
+        animation: none;
+      }
+      & img[src*="seta-2"] {
+        height: 6.5rem;
         bottom: 2.25rem;
         left: -7.75rem;
-            }
-            & img[src*="seta-3"] {
-                width: 6rem;
-                bottom: -4rem;
-                right: -6rem;
-            }
+        animation: none;
+      }
+      & img[src*="seta-3"] {
+        width: 6rem;
+        bottom: -4rem;
+        right: -6rem;
+        animation: none;
+      }
 
-            & span {
-                font-size: 1rem;
-                line-height: 1.4;
-              
-                &:nth-child(8) {
-                  top: 3rem;
-                  left: -9rem;
-              }
-              
-              &:nth-child(9) {
-               bottom: 9.5rem;
-               left: -9rem;
-              }
-              
-              &:nth-child(10) {
-              bottom: -6rem;
-              right: -7rem;
-              }
-              
-              }
-        
+      & span {
+        font-size: 1rem;
+        line-height: 1.4;
+
+        &:nth-child(8) {
+          top: 3rem;
+          left: -9rem;
+          animation: none;
         }
+
+        &:nth-child(9) {
+          bottom: 9.5rem;
+          left: -9rem;
+          animation: none;
+        }
+
+        &:nth-child(10) {
+          bottom: -6rem;
+          right: -7rem;
+          animation: none;
+        }
+      }
     }
+  }
 }
-
-
